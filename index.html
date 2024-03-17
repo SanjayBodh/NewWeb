@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="icon" type="image/x-icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Angkor&family=Caprasimo&family=Macondo&family=Moirai+One&family=Titan+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Fixed Deposit Information</title>
+    <style>
+.box a{
+text-decoration:none;
+color:white;
+background:skyblue;
+padding:4px 10px;
+border-radius:5px;
+}
+.tablink {
+  background-color: #fff;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+  border-radius:10px;
+font-weight:bold;
+text-shadow:2px 2px 6px rgba(0,0,0,0.8);
+}
+
+.tablink:hover {
+  background-color: purple;
+border-radius:10px;
+color:white;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+
+#Home {background-color: white;}
+#News {background-color: white;}
+#Contact {background-color: white;}
+#About {background-color: white;}
+
+
+.page-two{
+background:green;
+display:flex;
+height:100vh;
+}
+.two-left{
+width:100%;
+height:auto;
+background:red;
+border:1px solid black;
+}
+.two-right{
+width:70%;
+height:70%;
+opacity:0;
+background:green;
+transition:all 2s;
+filter:blur(10px);
+transform:translateY(50%);
+}
+
+.showb{
+opacity:1;
+filter:blur(0);
+transform:translateX(-0);
+}
+.two-right img{
+width:100%;
+height:100%;
+}
+.animate__animated.animate__rubberBand {
+  --animate-duration: 2s;
+}
+.material-symbols-outlined{
+position:relative;
+top:5px;
+font-weight:bold;
+color:skyblue;
+}
+.get-started img{
+width:30px;
+height:30px;
+position:relative;
+top:5px;
+filter:invert(100%);
+
+}
+.container-onee{
+display:none;
+}
+.container-one{
+width:300px;
+height:auto;
+backgroundgreen;
+position:absolute;
+z-index:10;
+top:10%;
+}
+.box-inside,.box-inside-two{
+width:100%;
+height:100%;
+position:relative;
+backgroundblue;
+}
+.box-inside{
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+gap:2rem;
+}
+.rod{
+position:absolute;
+left:5%;
+width:10px;
+height:100%;
+background:black;
+border-radius:20px;
+border:1px solid white;
+}
+.box{
+width:85%;
+left:40px;
+height:auto;
+background:rgba(0,0,0,0.4);
+position:relative;
+opacity:0;
+transition:all 2s;
+filter:blur(10px);
+transform:translateX(-100%);
+font-size:18px;
+color:white;
+border-radius:10px;
+padding:5px;
+backdrop-filter:blur(5px);
+}
+
+.shows{
+opacity:1;
+filter:blur(0);
+transform:translateY(0);
+}   
+.container-two{
+width:500px;
+height:AUTO;
+backgroundred;
+position:absolute;
+z-index:10;
+top:35%;
+left:55%;
+transform:translate(-50%,-50%);
+position:absolute;
+text-align:center;
+}
+.get-started{
+position:relative;
+}
+.box-inside-two a:hover{
+background:white;
+transition:all 0.6s;
+border:1px solid black;
+color:black;
+}
+.box-inside-two a{
+text-decoration:none;
+position:absolute;
+left:50%;
+transform:translate(-50%,-50%);
+color:white;
+font-size:30px;
+background:black;
+border-radius:5px;
+padding:5px 10px;
+transition:all 0.6s;
+border:1px solid white;
+}
+.box-inside-two p{
+font-size:19px;
+color:black;
+}
+.box-inside-two h1{
+font-size:48px;
+color:white;
+text-shadow:2px 2px 5px rgba(0,0,0,0.6);
+}
+body {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+
+body::-webkit-scrollbar {
+    display: none; 
+background:transparent;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+display:none; 
+}
+
+body::-webkit-scrollbar-thumb {
+   background: transparent;
+display:none; 
+}
+*{
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+input,textarea,button,select,a{
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+a:focus,a:visited,a:active{
+outline:none;
+}
+.no-select {
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+html{
+scroll-behavior:smooth;
+}
+body{
+padding:0;
+margin:0;
+
+}
+
+
+
+
+.body {
+  display: flex;
+  background green;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height:500px;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+
+.container {
+      position: relative;
+backgroundgreen;
+      height: 150vh;
+    }
+
+    .sticky-image {
+      width: 100%;
+      height: 100vh; /* Set the height of the sticky image */
+      background-image: url('images/landing.jpeg'); 
+      background-size: cover;
+      background-position: center;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    .text-overlay {
+      position: absolute;
+      bottom: 0%;
+      left: 0;
+      width: 100%;
+height:auto;
+      padding: 10px;
+      box-sizing: border-box;
+      background: linear-gradient(transparent,transparent,white);
+      z-index: 2;
+text-align:center;
+    }
+.text-overlay h1{
+font-size:60px;
+color:black;
+}
+.text-overlay p{
+font-size:40px;
+color:black;
+}
+
+
+
+.page-one{
+display:none;
+}
+
+.page-one,.page-two,.page-three{
+width:100%;
+height:100vh;
+background:white;
+border2px solid black;
+position:relative;
+overflow:hidden;
+}
+ #form-containerr {
+display:none;
+}
+  #form-container h1{
+color:white;
+text-align:center;
+font-size:40px;
+}
+
+
+    #form-container {
+      position: fixed;
+      top: -300%; 
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0,0,0,0.6);
+      padding: 20px;
+      width: 100%;
+height:100vh;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      opacity: 0;
+z-index:10000000;
+    }
+
+
+
+    #close-button {
+      position: absolute;
+      top: 10px;
+      right: 5%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      color: white;
+    }
+
+section{
+width:100%;
+height:auto;
+}
+header{
+width:100%;
+height:100px;
+position:fixed;
+top:0;
+display:flex;
+justify-content:space-between;
+background:rgba(255,255,255,0.1);
+     transition: background-color 0.3s ease;
+            z-index: 100;
+box-shadow:3px 5px 10px rgba(0,0,0,0.3);
+}
+.navigation-anchor{
+backgroundgreen;
+width:auto;300px;
+display:flex;
+justify-content:center;
+gap:1rem;
+position:relative;
+}
+header h1{
+font-size:30px;
+position:relative;
+left:25px;
+font-family:angkor;
+}
+.navigation-anchor a:hover{
+transition:all ease 0.5s;
+text-decoration:underline;
+}
+#signin p{
+font-size:15px;
+position:relative;
+top:10px;;
+}
+#signin{
+text-decoration:none;
+font-size:21px;
+background:black;
+position:relative;
+top:24px;
+right:5px;
+border-radius:5px;
+height:24px;
+font-weight:bold;
+padding:5px 10px;
+color:white;
+transition:all ease 0.5s;
+width30px;
+height:40px;
+border:1px solid white;
+}
+#signin img{
+width:25px;
+height:25px;
+filter:invert(100%);
+position:absolute;
+top:35%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+.navigation-anchor a{
+text-decoration:none;
+font-size:21px;
+backgroundorange;
+position:relative;;
+top:27px;
+height:24px;
+font-weight:bold;
+padding:5px 10px;
+color:black;
+transition:all ease 0.5s;
+}
+#main-h {
+text-decoration:none;
+color:rgba(0,0,0,0.7);
+     transition: background-color 0.3s ease;
+            z-index: 100;
+cursor:pointer;
+}
+.main-h{
+opacity:0;
+transition:all 1s;
+filter:blur(10px);
+transform:translateY(-100%);
+scale0;
+}
+
+.showslidesub{
+scale0.98;
+opacity:1;
+filter:blur(0);
+transform:translateX(0);
+}
+.combine{
+display:flex;
+gap:2rem;
+}
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+ background-color: rgba(0,0,0,0.6);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: orange;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+.hamburger{
+position:relative;
+z-index:1000;
+backgroundred;
+display:none;
+width:30px;
+height:25px;
+top:35px;
+right:12px;
+}
+.hamburger img{
+width:100%;
+height:100;
+}
+
+@media(max-width:768px){
+header h1{
+font-size:23px;
+position:relative;
+left:10px;
+top:10px;
+font-family:angkor;
+}
+.combine{
+display:none;
+}
+.overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+.hamburger{
+display:block;
+}
+  #form-containerr h1{
+color:black;
+text-align:center;
+font-size:40px;
+}
+
+
+    #form-containerr {
+      position: fixed;
+      top: -300%; 
+      left: 50%;
+      transform: translateX(-50%);
+      background-color:white;
+      padding: 20px;
+      width: 100%;
+height:100vh;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      opacity: 0;
+z-index:10000000;
+display:block;
+    }
+
+
+
+    #close-buttonn {
+      position: absolute;
+      top: 10px;
+      right: 5%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      color: BLACK;
+    }
+.text-overlay {
+      position: absolute;
+      bottom: 0%;
+      left: 0;
+      width: 100%;
+height:auto;
+      padding: 20px;
+      box-sizing: border-box;
+      background: linear-gradient(transparent,transparent,white);
+      z-index: 2;
+text-align:center;
+    }
+.text-overlay h1{
+font-size:38px;
+}
+.text-overlay p{
+font-size:26px;
+}
+.container-one{
+display:none;
+}
+.container-two{
+width:100%;
+height:AUTO;
+backgroundred;
+position:absolute;
+z-index:10;
+top:30%;
+left:50%;
+transform:translate(-50%,-50%);
+position:absolute;
+text-align:center;
+}
+.container-onee{
+width:100%;
+height:auto;
+backgroundgreen;
+position:absolute;
+z-index:10;
+top:10%;
+display:block
+}
+ .rod{
+position:absolute;
+left:3%;
+width:10px;
+height:100%;
+border:2px solid white;
+background:skyblue;
+border-radius:20px;
+}
+.box{
+width:85%;
+left:33px;
+color:white;
+border-radius:10px;
+padding:8px;
+}
+.page-one{
+display:block;
+}
+.get-started a{
+font-size:22px;
+}
+ .get-started img{
+width:25px;
+height:25px;
+}
+.page-two{
+display:flex;
+flex-direction:column;
+height:auto;
+}
+.two-left{
+width:100%;
+height:auto;
+background:red;
+border:1px solid black;
+}
+.two-right{
+width:100%;
+height:70%;
+opacity:0;
+transition:all 2s;
+filter:blur(10px);
+transform:translateY(50%);
+}
+
+.showb{
+opacity:1;
+filter:blur(0);
+transform:translateX(-0);
+}
+.tablink {
+  background-color: #fff;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 7px 8px;
+  font-size: 14px;
+  width: 25%;
+  border-radius:10px;
+font-weight:bold;
+}
+
+.tablink:hover {
+  background-color: black;
+border-radius:10px;
+color:white
+}
+
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+.box-inside-two h1{
+font-size:40px;
+color:white;
+}
+}
+</style>
+<body>
+<section>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a onclick="toggleFormm()" >signin</a>
+  </div>
+</div>
+<div id="form-containerr">
+<h1>HIMACHAL360</h1>
+<div class="form-equalll">
+  <button id="close-buttonn" onclick="toggleFormm()">Close</button>
+  
+</div>
+</div>
+
+<header id="main-header">
+<div class="main-h">
+<h1><a href="https://www.google.com" id="main-h">HIMACHAL360</a></h1></div>
+<div class="combine">
+<div class="navigation-anchor">
+<a href="#">About</a>
+<a href="#">Artical</a>
+<a href="#">Blog</a>
+</div>
+<div id="signin"  onclick="toggleForm()"><img src="images/signin.png" alt="signin"><p>Account</p></div>
+<div id="form-container">
+<h1>HIMACHAL360</h1>
+<div class="form-equall">
+  <button id="close-button" onclick="toggleForm()">Close</button>
+  
+</div>
+</div>
+</div>
+<div class="hamburger" id="hamburger"><img src="images/bar.png" onclick="openNav()" alt="bars"></div>
+</header>
+
+
+<div class="container">
+  <div class="sticky-image"></div>
+<div class="container-one">
+<div class="box-inside">
+<div class="rod"></div>
+<div class="box">
+ <span style="font-weight:bold;font-size:25px;">Deposits</span> <span class="material-symbols-outlined">
+currency_rupee
+</span><br>Here's an overview of the various aspects that make Himachal Pradesh a unique and captivating destination<br><br>
+<a href="">Overview</a>
+</div>
+<div class="box">
+<span style="font-weight:bold;font-size:25px;">Return</span> <span class="material-symbols-outlined">
+assignment_return
+</span><br>
+ Here's an overview of the various aspects that make Himachal Pradesh a unique and captivating destination<br><br>
+<a href="">Overview</a>
+</div>
+<div class="box">
+<span style="font-weight:bold;font-size:25px;">Insterest</span> <span class="material-symbols-outlined">
+percent
+</span><br>
+ Here's an overview of the various aspects that make Himachal Pradesh a unique and captivating destination<br><br>
+<a href="">Overview</a>
+</div>
+</div>
+</div>
+<div class="container-two">
+<div class="box-inside-two">
+<h1 class="animate__animated animate__rubberBand animate__delay-1s" >HIMACHAL360</h1>
+
+<p>Your diligent saver planning for your future financial stability. invest a portion of your savings into <span style="color:white;text-shadow:none;font-weight:bold;">HIMACHAL360</span> Fixed Deposit (FD) with a <span style="color:white;font-weight:bold;text-shadow:none;">10%</span> interest rate.</p><br><br>
+<div class="get-started">
+<a href="signup.html">Get Started <img src="images/arrow.gif"></a>
+</div>
+</div>
+</div>
+  <div class="text-overlay">
+    <h1>Himachal Pradesh</h1>
+    <p>Himachal Pradesh, situated in the northern part of India, is a state of enchanting beauty, diverse landscapes, and rich cultural heritage. Here's an overview of the various aspects that make Himachal Pradesh a unique and captivating destination.
+</p>
+  </div>
+</div>
+
+<div class="page-one">
+<div class="container-onee">
+<div class="box-inside">
+<div class="rod"></div>
+<div class="box">
+<span style="font-weight:bold;font-size:25px;">Deposits</span><span class="material-symbols-outlined">
+currency_rupee
+</span><br><br>Here's an overview of the various aspects that make Himachal Pradesh a unique and captivating destination<br><br>
+<a href="">Overview</a><br><br>
+</div>
+<div class="box">
+<span style="font-weight:bold;font-size:25px;">Return</span><span class="material-symbols-outlined">
+assignment_return
+</span><br><br>
+ Here's an overview of the various aspects that make Himachal Pradesh a unique and captivating destination<br><br>
+<a href="">Overview</a><br><br>
+</div>
+<div class="box">
+<span style="font-weight:bold;font-size:25px;">Insterest</span><span class="material-symbols-outlined">
+percent
+</span><br><br>
+ Here's an overview of the various aspects that make Himachal Pradesh a unique and captivating destination<br><br>
+<a href="">Overview</a><br><br>
+</div>
+</div>
+</div>
+</div>
+<div class="page-two">
+<div class="two-right"><img src="images/group.png"></div>
+<div class="two-left">
+<button class="tablink" onclick="openPage('Home', this, 'skyblue')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'skyblue')" >News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'skyblue')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'skyblue')">About</button>
+
+<div id="Home" class="tabcontent">
+  <h3 >Home</h3>
+  <p>Home is where the heart is..</p>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p >Some news this fine day!</p> 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3 >Contact</h3>
+  <p >Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3 >About</h3>
+  <p >Who we are and what we do.</p>
+</div>
+</div>
+</div>
+<div class="page-three">
+3
+</div>
+<div class="body">
+ <footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+
+    </ul>
+    <p>&copy;2024 sanjay bodh | All Rights Reserved</p>
+  </footer>
+</div>
+</section>
+</body>
+ <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ <script>
+        document.addEventListener('scroll', function () {
+            var header = document.getElementById('main-header');
+            var h  document.getElementById('main-h');
+            var scrollPosition = window.scrollY;
+
+            // Adjust the opacity based on scroll position
+            header.style.backgroundColor = 'rgba(255,255,255, ' + (0.3 - scrollPosition / 300) + ')';
+             h.style.color = 'rgba(0, 0, 0, ' + (0.7 - scrollPosition / 300) + ')';
+        });
+    </script>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+  document.getElementById("hamburger").style.opacity = "0";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+   document.getElementById("hamburger").style.opacity = "1";
+}
+</script>
+<script defer>
+const observers = new IntersectionObserver((entries) => {
+entries.forEach((entry) => {
+console.log(entry)
+if (entry.isIntersecting) {
+entry.target.classList.add('showslidesub');
+} 
+});
+});
+
+const hiddenElements = document.querySelectorAll('.main-h');
+hiddenElements.forEach((el) => observers.observe(el));
+
+
+</script>
+<script defer>
+const observersb = new IntersectionObserver((entries) => {
+entries.forEach((entry) => {
+console.log(entry)
+if (entry.isIntersecting) {
+entry.target.classList.add('showb');
+} 
+});
+});
+
+const hiddenElementsb = document.querySelectorAll('.two-right');
+hiddenElementsb.forEach((el) => observersb.observe(el));
+
+
+</script>
+<script>
+  let formVisible = false;
+
+  function toggleForm() {
+    const formContainer = document.getElementById('form-container');
+
+    if (formVisible) {
+      formContainer.style.top = '-300%';
+      formContainer.style.opacity = '0';
+    } else {
+      formContainer.style.top = '0%';
+      formContainer.style.opacity = '1';
+    }
+
+    formVisible = !formVisible;
+  }
+</script>
+<script>
+  let formVisiblee = false;
+
+  function toggleFormm() {
+    const formContainerr = document.getElementById('form-containerr');
+
+    if (formVisiblee) {
+      formContainerr.style.top = '-300%';
+      formContainerr.style.opacity = '0';
+    } else {
+      formContainerr.style.top = '0%';
+      formContainerr.style.opacity = '1';
+    }
+
+    formVisiblee = !formVisiblee;
+  }
+</script>
+<script defer>
+const observer = new IntersectionObserver((entries) => {
+entries.forEach((entry) => {
+console.log(entry)
+if (entry.isIntersecting) {
+entry.target.classList.add('shows');
+} 
+});
+});
+
+const hiddenElementss = document.querySelectorAll('.box');
+hiddenElementss.forEach((el) => observer.observe(el));
+
+
+</script>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<script defer>
+const observert = new IntersectionObserver((entries) => {
+entries.forEach((entry) => {
+console.log(entry)
+if (entry.isIntersecting) {
+entry.target.classList.add('showst');
+} 
+});
+});
+
+const hiddenElementst = document.querySelectorAll('.tabcontentt');
+hiddenElementst.forEach((el) => observert.observe(el));
+
+
+</script>
+</html>
