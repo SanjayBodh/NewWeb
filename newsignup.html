@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="icon" type="image/x-icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Angkor&family=Caprasimo&family=Macondo&family=Moirai+One&family=RocknRoll+One&family=Titan+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title> Signup Page</title>
+
+  <style>
+   </head>
+    body {
+width:100%;
+height:100vh;
+      margin: 0;
+      padding: 0;
+font-family:RocknRollone;
+    }
+.signup{
+backgroundgreen;
+position:absolute;
+width:40%;
+height:70%;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+border-radius:10px;
+align-items:center;
+text-align:center;
+box-shadow:6px 6px 12px rgba(0,0,0,0.4);
+}
+.signup h1{
+text-align:center;
+}
+.input{
+backgroundred;
+position:relative;
+align-items:center;
+text-align:center;
+}
+input{
+width:80%;
+height:40px;
+background:none;
+border:none;
+border-radius:0;
+border-bottom:1px solid rgba(0,0,0,0.4);
+outline:none;
+font-size:17px;
+
+}
+input[type="checkbox"]{
+width:20px;
+height:20px;
+}
+::placeholder{
+color:rgba(0,0,0,0.4);
+font-size:17px;
+}
+.check-flex{
+display:flex;
+justify-content:center;
+backgroundred;
+height:30px;
+gap:0.5rem;
+}
+.check-flex h3{
+position:relative;
+bottom:16px;
+}
+.signup-btn{
+font-size:17px;
+border-radius:8px;
+background:black;
+color:white;
+padding:6px 10px;
+text-decoration:none;
+}
+.material-symbols-outlined{
+position:relative;
+top:8px;
+font-size:35px;
+}
+@media(max-width:768px){
+.signup{
+backgroundgreen;
+position:absolute;
+width:100%;
+height:80%;
+top:55%;
+left:50%;
+transform:translate(-50%,-50%);
+border-radius:10px;
+align-items:center;
+text-align:center;
+box-shadow:6px 6px 12px rgba(0,0,0,0.4);
+}
+h1{
+text-align:center;
+font-weight:bold;
+font-size:30px;
+}
+}
+</style>
+
+<script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
+<body>
+<h1>HIMACHAL<spam style="background:skyblue;color:white;padding:5px;">360</spam></h1>
+<div class="signup">
+<h1>Sign up <span class="material-symbols-outlined">
+account_circle
+</span></h1>
+<br><div class="input">
+        <input type="text" id="username" placeholder="Username"><br><br>
+        <input type="email" id="email" placeholder="Email@gmail.com"><br><br>
+        <input type="password" id="password" placeholder="Password"><br><br>
+</div>
+      <div class="check-flex"><input type="checkbox" id="showpassword"><h3>show password</h3></div>
+<br>
+        <button class="signup-btn" type="submit" onclick="signUp()" value="Sign up" >sign up</button>
+<h4>already have an account?</h4>
+<a href="signin.html" class="signup-btn">Signin</a>
+
+   </div>   
+
+<script>
+var firebaseApp = firebase.initializeApp({ apiKey: "AIzaSyAuYft3xyKlTlYjng4eDIgqjQ6d-zuBVuQ",
+  authDomain: "login-page-a69bf.firebaseapp.com",
+  projectId: "login-page-a69bf",
+  storageBucket: "login-page-a69bf.appspot.com",
+  messagingSenderId: "679735259732",
+  appId: "1:679735259732:web:57dd373430985ffc21b3c1",
+  measurementId: "G-34NLH2943Z" });
+   var db = firebaseApp.firestore();
+   var auth = firebaseApp.auth();
+</script> 
+  
+<script>
+function signUp() {
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address");
+        return;
+    }
+
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            var user = userCredential.user;
+            alert("User registered successfully");
+            window.location.href = "signin.html";
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage;
+
+            if (errorCode === "auth/email-already-in-use") {
+                errorMessage = "This email is already in use by another account.";
+            } else if (errorCode === "auth/missing-password") {
+                errorMessage = "Please enter your password";
+            } else if (errorCode === "auth/weak-password") {
+                errorMessage = "Password should be at least 6 characters long";
+            } else if (errorCode === "auth/network-request-failed") {
+                errorMessage = "Hello! Your network connection is low or unreachable. Please check the connection";
+            } else {
+                errorMessage = error.message;
+            }
+
+            alert(errorMessage);
+        });
+}
+
+</script>
+<script>
+const passwordInput = document.getElementById("password");
+const showPasswordCheckbox = document.getElementById("showpassword");
+
+showPasswordCheckbox.addEventListener("change", function(){
+if (showPasswordCheckbox.checked){
+   passwordInput.type = "text";
+}
+else{
+passwordInput.type = "password";
+}
+})
+</script>
+</body>
+</html>
