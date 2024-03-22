@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>reset password</title>
+</head>
+<html>
+<head>
+  <title> Signin Page</title>
+  <style>
+   </head>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+::placeholder{
+color:black;
+font-size:17px;
+}
+    body {
+      font-family: garamond;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+</style>
+<script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
+<body>
+<fieldset >
+<h2 class="signin">Reset Password</h2></div>
+<br>
+        <input type="email" id="email" placeholder="Email@gmail.com">
+<br><br>
+
+        <button type="submit" onclick="resetPassword()" value="reset">send</button>
+
+<br><br>
+
+<a href="signin.html"><button type="button"  >signin</button></a>
+<a href="newsignup.html"><button type="button" >signup</button></a>
+
+</fieldset>
+<script>
+var firebaseApp = firebase.initializeApp({ apiKey: "AIzaSyAuYft3xyKlTlYjng4eDIgqjQ6d-zuBVuQ",
+  authDomain: "login-page-a69bf.firebaseapp.com",
+  projectId: "login-page-a69bf",
+  storageBucket: "login-page-a69bf.appspot.com",
+  messagingSenderId: "679735259732",
+  appId: "1:679735259732:web:57dd373430985ffc21b3c1",
+  measurementId: "G-34NLH2943Z" });
+   var db = firebaseApp.firestore();
+   var auth = firebaseApp.auth();
+</script>
+<script>
+function resetPassword(){
+var email= document.getElementById("email").value;
+var emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+if (!emailPattern.test(email)){
+alert("please enter an valid email address");
+return;
+}
+console.log(email)
+firebase.auth().sendPasswordResetEmail(email)
+  .then(() => {
+alert("password reset link has been send to your email");
+window.location.href="signin.html";
+   
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage;
+    if(errorCode === "auth/invalid-email"){
+    errorMessage = "hello! i am sanjay this email is invalid or wrong check the email and try again";
+}
+else if(errorCode === "auth/missing-email"){
+    errorMessage = "hello! i am sanjay please enter your email the field is blank";
+}
+else if(errorCode === "auth/user-not-found"){
+    errorMessage = "hello! i am sanjay i cannot found you or you email in my datalist first register this email to change the password";
+}
+else if(errorCode === "auth/network-request-failed"){
+    errorMessage = "hello! your network connection is low or unreachable please check the connection";
+}
+else
+{
+   errorMessage = error.message;
+}
+    
+    alert(errorMessage);
+
+
+
+  });
+}
+</script>
+</body>
+</html>
