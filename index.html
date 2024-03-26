@@ -2238,7 +2238,7 @@ function signIn() {
 
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((result) => {
-            window.location.href = "https:www.google.com";
+            window.location.href = "https://www.google.com";
         })
         .catch((error) => {
             var errorCode = error.code;
